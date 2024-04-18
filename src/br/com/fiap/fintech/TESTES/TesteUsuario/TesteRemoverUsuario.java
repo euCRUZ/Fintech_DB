@@ -1,4 +1,4 @@
-package br.com.fiap.fintech.testes.TesteUsuario;
+package br.com.fiap.fintech.TESTES.TesteUsuario;
 
 import br.com.fiap.fintech.JDBC.UsuarioDAO;
 

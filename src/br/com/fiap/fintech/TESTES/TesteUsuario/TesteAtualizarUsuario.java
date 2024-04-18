@@ -1,7 +1,7 @@
-package br.com.fiap.fintech.testes.TesteUsuario;
+package br.com.fiap.fintech.TESTES.TesteUsuario;
 
 import br.com.fiap.fintech.JDBC.UsuarioDAO;
-import br.com.fiap.fintech.modelos.Usuario;
+import br.com.fiap.fintech.MODELOS.Usuario;
 
 import java.util.Scanner;
 

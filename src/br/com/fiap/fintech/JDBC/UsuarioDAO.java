@@ -1,6 +1,6 @@
 package br.com.fiap.fintech.JDBC;
 
-import br.com.fiap.fintech.modelos.Usuario;
+import br.com.fiap.fintech.MODELOS.Usuario;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -27,6 +27,7 @@ public class UsuarioDAO {
             stmt.setString(3, usuario.getSenha());
 
             stmt.executeUpdate();
+            System.out.println("\n" + usuario.getNome() + " Cadastrado!");
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -54,12 +55,9 @@ public class UsuarioDAO {
                 int id = rs.getInt("ID_USER");
                 String nome = rs.getString("NM_NOME");
                 String email = rs.getString("DS_EMAIL");
-                //Cria um objeto Colaborador com as informações encontradas
-                Usuario usuario = new Usuario();
-                usuario.setNome(nome);
-                usuario.setEmail(email);
+
+                Usuario usuario = new Usuario(nome, email);
                 usuario.setId(id);
-                //Adiciona o usuario na lista
                 lista.add(usuario);
             }
         } catch (SQLException e) {
@@ -91,9 +89,7 @@ public class UsuarioDAO {
                 String nome = rs.getString("NM_NOME");
                 String email = rs.getString("DS_EMAIL");
                 String senha = rs.getString("DS_SENHA");
-                usuario = new Usuario();
-                usuario.setNome(nome);
-                usuario.setEmail(email);
+                usuario = new Usuario(nome, email);
                 usuario.setId(codigo);
                 usuario.setSenha(senha);
             }

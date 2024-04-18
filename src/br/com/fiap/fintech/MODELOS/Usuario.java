@@ -1,4 +1,4 @@
-package br.com.fiap.fintech.modelos;
+package br.com.fiap.fintech.MODELOS;
 
 public class Usuario {
 
@@ -10,11 +10,10 @@ public class Usuario {
 
     private int id;
 
-//    public Usuario (int idUser, String nm_nome, String ds_email){
-//        this.id = idUser;
-//        this.nome = nm_nome;
-//        this.email = ds_email;
-//    }
+    public Usuario (String nm_nome, String ds_email){
+        this.nome = nm_nome;
+        this.email = ds_email;
+    }
 
     public String getNome() {
         return nome;
@@ -50,11 +49,13 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario - " +
-                "nome = " + nome + '\'' +
-                ", email = " + email + '\'' +
-                ", id = " + id;
+        return String.format("\nUsuario:\n" +
+                        "\tNome: %s\n" +
+                        "\tEmail: %s\n" +
+                        "\tID: %d",
+                nome, email, id);
     }
+
 }
 
 
