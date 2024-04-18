@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class TesteAtualizarReceita {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         ReceitaDAO dao = new ReceitaDAO();
         List<Receita> lista = dao.listarReceita();
 
@@ -16,22 +16,24 @@ public class TesteAtualizarReceita {
         }
 
         System.out.println("Digite o ID do usuário: ");
-        int id = scan.nextInt();
+        int id = scanner.nextInt();
+        scanner.nextLine();
 
         System.out.println("Digite o código (ID) da receita que deseja atualizar: ");
-        int cdReceita = scan.nextInt();
+        int cdReceita = scanner.nextInt();
+        scanner.nextLine();
 
         System.out.println("Digite o valor da receita:");
-        double valor = scan.nextDouble();
-        scan.nextLine(); // Limpa o buffer após ler o número
+        double valor = Double.parseDouble(scanner.nextLine());
+        scanner.nextLine();
 
         System.out.println("Digite a descrição da receita:");
-        String descricao = scan.nextLine();
+        String descricao = scanner.nextLine();
 
         System.out.println("Digite a data da receita:");
-        String data = scan.nextLine();
+        String data = scanner.nextLine();
 
-        scan.close();
+        scanner.close();
 
         Receita receita = new Receita(valor, id, descricao, data);
         receita.setCodigoTransacao(cdReceita);

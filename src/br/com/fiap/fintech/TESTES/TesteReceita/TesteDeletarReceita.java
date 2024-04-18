@@ -10,6 +10,7 @@ public class TesteDeletarReceita {
 
         System.out.println("Digite o código (ID) da receita que deseja remover: ");
         int id = scanner.nextInt();
+        scanner.nextLine();
 
         dao.removerReceita(id);
 

@@ -53,7 +53,7 @@ public class InvestimentoDAO {
             stmt = conexao.prepareStatement("SELECT * FROM T_INVESTIMENTO");
             rs = stmt.executeQuery();
 
-            //Percorre todos os registros encontrados
+
             while (rs.next()) {
                 int id = rs.getInt("ID_USER");
                 String data = rs.getString("DT_DATA");

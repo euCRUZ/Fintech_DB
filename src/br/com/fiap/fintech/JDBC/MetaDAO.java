@@ -22,6 +22,7 @@ public class MetaDAO {
                     "DT_TERMINO) " +
                     "VALUES" +
                     " (?, ?, ?, ?, ?)";
+
             stmt = conexao.prepareStatement(sql);
 
             stmt.setInt(1, meta.getIdUser());
@@ -44,7 +45,7 @@ public class MetaDAO {
         }
     }
 
-    public List<Meta> listar() {
+    public List<Meta> listarMeta() {
         List<Meta> lista = new ArrayList<Meta>();
         PreparedStatement stmt = null;
         ResultSet rs = null;
@@ -133,6 +134,4 @@ public class MetaDAO {
             }
         }
     }
-
-
 }

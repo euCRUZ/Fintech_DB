@@ -1,8 +1,5 @@
 package br.com.fiap.fintech.MODELOS;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 public class Meta {
 
     private int idMeta;
