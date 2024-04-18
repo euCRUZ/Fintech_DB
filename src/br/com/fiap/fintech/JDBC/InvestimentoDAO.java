@@ -44,8 +44,7 @@ public class InvestimentoDAO {
         }
     }
 
-    public List<Investimento> listar() {
-        //Cria uma lista de colaboradores
+    public List<Investimento> listarInvestimentos() {
         List<Investimento> lista = new ArrayList<Investimento>();
         PreparedStatement stmt = null;
         ResultSet rs = null;

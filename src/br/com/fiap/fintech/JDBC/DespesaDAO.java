@@ -12,7 +12,7 @@ public class DespesaDAO{
 
     private Connection conexao;
 
-    public void cadastrarReceita(Despesa despesa) {
+    public void cadastrarDespesa(Despesa despesa) {
         PreparedStatement stmt = null;
 
         try {

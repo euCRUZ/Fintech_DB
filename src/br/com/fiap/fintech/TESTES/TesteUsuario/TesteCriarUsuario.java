@@ -5,19 +5,19 @@ import br.com.fiap.fintech.MODELOS.Usuario;
 
 import java.util.Scanner;
 
-public class TesteCadastroUsuario {
+public class TesteCriarUsuario {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         UsuarioDAO dao = new UsuarioDAO();
 
         System.out.println("Digite o nome do usuário:");
-        String nome = scan.nextLine();
+        String nome = scanner.nextLine();
 
         System.out.println("Digite o email do usuário:");
-        String email = scan.nextLine();
+        String email = scanner.nextLine();
 
         System.out.println("Digite a senha do usuário:");
-        String senha = scan.nextLine();
+        String senha = scanner.nextLine();
 
         Usuario usuario = new Usuario(nome, email);
         usuario.setSenha(senha);

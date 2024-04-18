@@ -18,7 +18,8 @@ public class MetaDAO {
         try {
             conexao = FintechDBManager.obterConexao();
 
-            String sql = "INSERT INTO T_INVESTIMENTO (ID_USER, NM_META, VL_META, DT_INICIO, DT_TERMINO) " +
+            String sql = "INSERT INTO T_META (ID_USER, NM_META, VL_META, DT_INICIO, " +
+                    "DT_TERMINO) " +
                     "VALUES" +
                     " (?, ?, ?, ?, ?)";
             stmt = conexao.prepareStatement(sql);
@@ -57,7 +58,7 @@ public class MetaDAO {
                 int idMeta = rs.getInt("ID_META");
                 int idUser = rs.getInt("ID_USER");
                 String nome = rs.getString("NM_META");
-                double valor = rs.getDouble("VL_VALOR");
+                double valor = rs.getDouble("VL_META");
                 String dtInicio = rs.getString("DT_INICIO");
                 String dtTermino = rs.getString("DT_TERMINO");
 

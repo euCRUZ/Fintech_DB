@@ -12,25 +12,27 @@ public class TesteAtualizarInvestimento {
 
         System.out.println("Digite o ID do usuário: ");
         int id = scanner.nextInt();
+        scanner.nextLine();
 
         System.out.println("Digite o código do investimento que deseja atualizar: ");
         int codigo = scanner.nextInt();
-
-        System.out.println("Digite o novo valor do investimento: ");
-        double valor = scanner.nextDouble();
+        scanner.nextLine();
 
         System.out.println("Digite a nova data do investimento: ");
-        String dataVencimento = scanner.next();
+        String data = scanner.nextLine();
 
-        System.out.println("Digite a nova rentabilidade do investimento: ");
-        double rentabilidade = scanner.nextDouble();
+        System.out.println("Digite o novo valor do investimento: ");
+        double valor = Double.parseDouble(scanner.nextLine());
 
         System.out.println("Digite o novo tipo do investimento: ");
-        String tipo = scanner.next();
+        String tipo = scanner.nextLine();
+
+        System.out.println("Digite o valor da rentabilidade: ");
+        double rentabilidade = Double.parseDouble(scanner.nextLine());
 
         scanner.close();
 
-        Investimento investimento = new Investimento(id, dataVencimento, rentabilidade, valor, tipo);
+        Investimento investimento = new Investimento(id, data, rentabilidade, valor, tipo);
         investimento.setCdInvestimento(codigo);
 
         dao.atualizarInvestimento(investimento);

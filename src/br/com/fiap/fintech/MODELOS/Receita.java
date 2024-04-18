@@ -1,7 +1,7 @@
 package br.com.fiap.fintech.MODELOS;
 
 public class Receita {
-    // Convenção Java para nomes de variáveis: camelCase
+
     private double valorReceita;
     private int codigoTransacao;
     private String descricao;

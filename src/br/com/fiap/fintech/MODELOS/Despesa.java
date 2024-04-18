@@ -39,4 +39,14 @@ public class Despesa {
         return data;
     }
 
+    public String toString() {
+        return String.format("Despesa:\n" +
+                        "\tValor da Despesa: %.2f\n" +
+                        "\tCódigo da Transação: %d\n" +
+                        "\tDescrição: %s\n" +
+                        "\tID do Usuário: %d\n" +
+                        "\tData: %s",
+                valorDespesa, codigoTransacao, descricao, idUser, data);
+    }
+
 }

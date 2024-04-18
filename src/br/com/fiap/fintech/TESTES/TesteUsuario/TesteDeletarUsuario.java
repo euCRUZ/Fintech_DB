@@ -4,7 +4,7 @@ import br.com.fiap.fintech.JDBC.UsuarioDAO;
 
 import java.util.Scanner;
 
-public class TesteRemoverUsuario {
+public class TesteDeletarUsuario {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         UsuarioDAO dao = new UsuarioDAO();

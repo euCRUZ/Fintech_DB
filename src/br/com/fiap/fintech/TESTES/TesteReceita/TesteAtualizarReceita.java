@@ -2,13 +2,18 @@ package br.com.fiap.fintech.TESTES.TesteReceita;
 
 import br.com.fiap.fintech.JDBC.ReceitaDAO;
 import br.com.fiap.fintech.MODELOS.Receita;
-
+import java.util.List;
 import java.util.Scanner;
 
 public class TesteAtualizarReceita {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         ReceitaDAO dao = new ReceitaDAO();
+        List<Receita> lista = dao.listarReceita();
+
+        for (Receita receita : lista) {
+            System.out.println(receita.toString());
+        }
 
         System.out.println("Digite o ID do usuário: ");
         int id = scan.nextInt();

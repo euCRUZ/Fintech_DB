@@ -50,13 +50,12 @@ public class Meta {
 
     @Override
     public String toString() {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         return String.format("Meta:\n" +
                         "\tID do Usuário: %d\n" +
                         "\tNome da Meta: %s\n" +
                         "\tValor da Meta: %.2f\n" +
                         "\tData de Início: %s\n" +
                         "\tData de Término: %s",
-                idUser, nomeMeta, valorMeta, dateFormat.format(dataInicio), dateFormat.format(dataTermino));
+                idUser, nomeMeta, valorMeta, dataInicio, dataTermino);
     }
 }
