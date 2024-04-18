@@ -9,10 +9,7 @@ public class TesteCadastroUsuario {
     public static void main(String[] args) {
         
         Scanner scan = new Scanner(System.in);
-
-        //Instancia o DAO
         UsuarioDAO dao = new UsuarioDAO();
-        //Instancia o Colaborador
         Usuario usuario = new Usuario();
 
         System.out.println("Digite o nome do usuário:");
